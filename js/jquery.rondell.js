@@ -62,7 +62,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       },
       size: {
         width: null,
-        height: null
+        height: 300
       },
       visibleItems: 'auto',
       scaling: 2,
@@ -124,7 +124,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       },
       randomStart: false,
       funcEase: 'easeInOutQuad',
-      theme: 'default',
+      theme: 'light',
       preset: '',
       effect: null,
       onAfterShift: null,
@@ -456,6 +456,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       }
       if (this._focusedItem == null) {
         this._focusedItem = this._getItem(this.currentLayer);
+        console.log('Item selected is ',this._focusedItem);
       }
       return this.shiftTo(this.currentLayer);
     };

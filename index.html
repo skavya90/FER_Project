@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -44,94 +44,52 @@
 
   <div id="rondellCarousel" class="hidden">
 
-      <a target="_blank" rel="rondell_1" href="Stock_Images/HAPPY/happy_08.jpg" title="">
-        <img src="Stock_Images/HAPPY/happy_08.jpg">
-        <h5>Happy</h5>
-        
-      </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/ANGRY/angry_14.jpg" title="">
-      <img src="Stock_Images/ANGRY/angry_14.jpg">
-      <h5>Angry</h5>
-      
-    </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/SAD/sad_05.jpg" title="">
-      <img src="Stock_Images/SAD/sad_05.jpg">
-      <h5>Sad</h5>
-      
-    </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/SURPRISE/surprise_08.jpg" title="">
-      <img src="Stock_Images/SURPRISE/surprise_08.jpg">
-      <h5>surprise</h5>
-      
-    </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/DISGUST/disgust_02.jpg" title="">
-      <img src="Stock_Images/DISGUST/disgust_02.jpg">
-      <h5>Disgust</h5>
-      
-    </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/NEUTRAL/neutral_03.jpg" title="">
-      <img src="Stock_Images/NEUTRAL/neutral_10.jpg">
-      <h5>Neutral</h5>
-      
-    </a>
-
-    <a target="_blank" rel="rondell_1" href="Stock_Images/FEAR/fear_06.jpg" title="">
-      <img src="Stock_Images/FEAR/fear_06.jpg">
-      <h5>Fear</h5>
-      
-    </a>
   </div>
-  <br>
+
+  <div class="container">
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Emotion</th>
+          <th>Prediction (%)</th>
+          
+        </tr>
+  </thead>
+  </table>
+  </div>
+
+  <!--<br>
   <a href="#" class="resize-button">Resize</a>
   <br>
 
-  <br>
+  <br>-->
 
   </div><br class="clear">
   </div><br>
-  <noscript><img src="http://tracking.sebastianhelzle.net/piwik.php?idsite=5" style="border:0" alt=""></noscript>
+  <!--<noscript><img src="http://tracking.sebastianhelzle.net/piwik.php?idsite=5" style="border:0" alt=""></noscript>-->
   <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="js/jquery.rondell.js"></script>
   <script src="js/demohelpers.js"></script>
-  <script type="text/javascript">
-    (function () {
-      $(function () {
-        var carousel;
-        carousel = $("#rondellCarousel > *").rondell({
-          preset: "carousel"
-        });
-        $(".resize-button").click(function (e) {
-          e.preventDefault();
-          return carousel.fitToContainer();
-        });
-        return $.ajax({
-          url: "http://www.wookmark.com/api/json",
-          dataType: "jsonp",
-          success: function (data, text, xhqr) {
-            var item, rondellContent, _i, _len, _ref;
-            if (text === "success") {
-              rondellContent = "";
-              _ref = data.slice(0, 25);
-              for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-                item = _ref[_i];
-                rondellContent += "            <a href=\"" + item.image + "\" title=\"" + item.title + " @ " + item.url + "\" target=\"_blank\" style=\"display:none\">              <img src=\"" + item.preview + "\" title=\"" + item.title + "\" width=\"" + item.width + "\" height=\"" + item.height + "\"/>            </a>          ";
-              }
-              return $("#rondellCubic").html(rondellContent).children().rondell({
-                preset: "cubic"
-              });
-            }
-          }
-        });
-      });
+  <script type="text/javascript" src="Stock_Images/image_data_var.js"></script>
+  <script type="text/javascript" src="js/image_data.js"></script>
 
-    }).call(this);
+  <script type="text/javascript">
+    $(function () {
+      // Create a rondell with the 'carousel' preset and set an option
+      // to disable the rondell while the lightbox is displayed
+      $("#rondellCarousel > *").rondell({
+        preset: "carousel",
+      });
+    });
   </script>
+<script type="text/javascript">
+var mutationObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    console.log(mutation);
+  });
+});
+</script>
 
 
 </body>
