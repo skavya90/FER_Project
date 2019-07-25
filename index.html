@@ -8,28 +8,27 @@
   <meta name="description" content="Sebastian Helzle's jQuery Rondell plugin">
 
 
-  <script src="js/modernizr-2.0.6.min.js"></script>
+  
   <!-- Bootstrap Requirements-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
+  <!--<script src="js/modernizr-2.0.6.min.js"></script>-->
+  <!--CSS Files-->
   <link rel="stylesheet" href="css/screen.css" type="text/css" media="all" title="Screen">
   <link rel="stylesheet" href="css/jquery.rondell.css" type="text/css" media="all" title="Screen">
 </head>
 
 <body>
-
+  
   <h1 style="text-align: center; font-size: 50px; color: navy;">Emo Xpressy</h1>
-
+  <!--Navbar for Home, Details and About Links-->
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="nav-link" href="index.html">Home</a>
@@ -41,32 +40,31 @@
       <a class="nav-link" href="about.html">About Us</a>
     </li>
   </ul>
+   
+        <button style="float:right;border:10px;" id="upload-btn" type="button" class="btn btn-default">Add your Picture</button>
+  
+  
 
+  <!--Carousel Begins here-->
   <div id="rondellCarousel" class="hidden">
 
   </div>
+  <!--Carousel Ends Here-->
+  <br>
+  <br>
+  <!--Table that shows carousel focussed image related data-->
+  <div align="center" class="container" style="color:rgb(138, 131, 119);">
+    <table class="table" >
+      <div id='tabledata'></div>
+    </table>
 
-  <div class="container">
-  <table class="table">
-      <thead>
-        <tr>
-          <th>Emotion</th>
-          <th>Prediction (%)</th>
-          
-        </tr>
-  </thead>
-  </table>
   </div>
 
-  <!--<br>
-  <a href="#" class="resize-button">Resize</a>
+  <br class="clear">
   <br>
 
-  <br>-->
-
-  </div><br class="clear">
-  </div><br>
   <!--<noscript><img src="http://tracking.sebastianhelzle.net/piwik.php?idsite=5" style="border:0" alt=""></noscript>-->
+  <!--Includes requirements-->
   <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="js/jquery.rondell.js"></script>
@@ -74,24 +72,15 @@
   <script type="text/javascript" src="Stock_Images/image_data_var.js"></script>
   <script type="text/javascript" src="js/image_data.js"></script>
 
+  <!--funtion for Rondell Carousel Display-->
   <script type="text/javascript">
     $(function () {
-      // Create a rondell with the 'carousel' preset and set an option
+      // Creates a rondell with the 'carousel' preset and set an option
       // to disable the rondell while the lightbox is displayed
       $("#rondellCarousel > *").rondell({
         preset: "carousel",
       });
     });
-  </script>
-<script type="text/javascript">
-var mutationObserver = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    console.log(mutation);
-  });
-});
-</script>
-
-
+  </script>  
 </body>
-
 </html>
