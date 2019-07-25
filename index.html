@@ -40,14 +40,14 @@
       <a class="nav-link" href="about.html">About Us</a>
     </li>
   </ul>
-   
-        <button style="float:right;border:10px;" id="upload-btn" type="button" class="btn btn-default">Add your Picture</button>
-  
-  
+
+  <!--Allows user to choose a file from folder-->
+  <input style="padding-left:30px;content:Choose a Picture;" id="fileInputId" type='file' onchange="readURL(this);" />
+  <br>
 
   <!--Carousel Begins here-->
   <div id="rondellCarousel" class="hidden">
-
+    
   </div>
   <!--Carousel Ends Here-->
   <br>
@@ -69,7 +69,7 @@
   <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
   <script src="js/jquery.rondell.js"></script>
   <script src="js/demohelpers.js"></script>
-  <script type="text/javascript" src="Stock_Images/image_data_var.js"></script>
+  <script type="text/javascript" src="js/image_data_var.js"></script>
   <script type="text/javascript" src="js/image_data.js"></script>
 
   <!--funtion for Rondell Carousel Display-->
@@ -82,5 +82,6 @@
       });
     });
   </script>  
+  
 </body>
 </html>
