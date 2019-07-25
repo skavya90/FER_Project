@@ -154,6 +154,7 @@ observer.observe(rondellCarousel, {
 });
 
 //Gets image_id  of the selected image
+/*
 function readURL(input) {
   fileName = document.getElementById('fileInputId').files[0].name
 
@@ -193,3 +194,4 @@ function readURL(input) {
   divTag.appendChild(aTag);
   $imageContent.appendChild(divTag);
 }
+*/
