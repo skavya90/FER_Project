@@ -2,14 +2,14 @@ html {
   height: 100%;
   font-size: 13px;
   font-family: "Lucida Grade", arial;
-  background:black;
+  background:#EAE7DC;
  
 }
 
 body, div, dl, dt, dd, ol, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin-left: 20px;
   padding: 0;
-  background:black;
+  background:#EAE7DC;
 }
 
 table {
@@ -875,4 +875,8 @@ th {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+ul.nav.justify-content-center {
+  color:#6B7A8F;
+  background: #6B7A8F
 }
